@@ -1,2 +1,571 @@
 # pyplumecamee.github.io
 wrf-bplume website
+
+<html lang="en" dir="ltr" class="client-js"><head><script type="text/javascript" async="" src="https://ssl.google-analytics.com/ga.js"></script>
+<meta charset="UTF-8">
+<title>WRF-bPlume</title>
+<meta name="generator" content="MediaWiki 1.25.0">
+<link rel="alternate" type="application/x-wiki" title="Edit" href="/wiki/index.php?title=Basic_Wiki_Formatting&amp;action=edit">
+<!-- <link rel="edit" title="Edit" href="/wiki/index.php?title=Basic_Wiki_Formatting&amp;action=edit"> -->
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="/wiki/opensearch_desc.php" title="This Might Be A Wiki (en)">
+<link rel="EditURI" type="application/rsd+xml" href="https://tmbw.net/wiki/api.php?action=rsd">
+<link rel="alternate" hreflang="x-default" href="/wiki/Basic_Wiki_Formatting">
+<link rel="alternate" type="application/atom+xml" title="This Might Be A Wiki Atom feed" href="/wiki/index.php?title=Special:RecentChanges&amp;feed=atom">
+<link rel="stylesheet" href="https://tmbw.net/wiki/load.php?debug=false&amp;lang=en&amp;modules=azureSkinCSS%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.ui.button&amp;only=styles&amp;skin=azure&amp;*">
+<style>
+.imgContainer{
+    float:left;
+}
+.mw-collapsible-toggle{float:right;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none}  .mw-content-ltr .mw-collapsible-toggle,.mw-content-rtl .mw-content-ltr .mw-collapsible-toggle{float:right} .mw-content-rtl .mw-collapsible-toggle,.mw-content-ltr .mw-content-rtl .mw-collapsible-toggle{float:left}.mw-customtoggle,.mw-collapsible-toggle{cursor:pointer} caption .mw-collapsible-toggle,.mw-content-ltr caption .mw-collapsible-toggle,.mw-content-rtl caption .mw-collapsible-toggle,.mw-content-rtl .mw-content-ltr caption .mw-collapsible-toggle,.mw-content-ltr .mw-content-rtl caption .mw-collapsible-toggle{float:none} li .mw-collapsible-toggle,.mw-content-ltr li .mw-collapsible-toggle,.mw-content-rtl li .mw-collapsible-toggle,.mw-content-rtl .mw-content-ltr li .mw-collapsible-toggle,.mw-content-ltr .mw-content-rtl li .mw-collapsible-toggle{float:none} .mw-collapsible-toggle-li{list-style:none}
+/* cache key: tmbw_wikidb:resourceloader:filter:minify-css:7:e1ffd603cbaaa5f1a36e0d13fe843535 */
+.suggestions{overflow:hidden;position:absolute;top:0;left:0;width:0;border:none;z-index:1099;padding:0;margin:-1px 0 0 0}.suggestions-special{position:relative;background-color:white;cursor:pointer;border:solid 1px #aaaaaa;padding:0;margin:0;margin-top:-2px;display:none;padding:0.25em 0.25em;line-height:1.25em}.suggestions-results{background-color:white;cursor:pointer;border:solid 1px #aaaaaa;padding:0;margin:0}.suggestions-result{color:black;margin:0;line-height:1.5em;padding:0.01em 0.25em;text-align:left; overflow:hidden;-o-text-overflow:ellipsis; text-overflow:ellipsis;white-space:nowrap}.suggestions-result-current{background-color:#4C59A6;color:white}.suggestions-special .special-label{color:gray;text-align:left}.suggestions-special .special-query{color:black;font-style:italic;text-align:left}.suggestions-special .special-hover{background-color:silver}.suggestions-result-current .special-label,.suggestions-result-current .special-query{color:white}.highlight{font-weight:bold}
+/* cache key: tmbw_wikidb:resourceloader:filter:minify-css:7:f8d0c6895ce3ae14434c16b8fca59432 */
+.postedit-container{margin:0 auto;position:fixed;top:0;height:0;left:50%;z-index:1000;font-size:13px}.postedit-container:hover{cursor:pointer}.postedit{position:relative;top:0.6em;left:-50%;padding:.6em 3.6em .6em 1.1em;line-height:1.5625em;color:#626465;background-color:#f4f4f4;border:1px solid #dcd9d9;text-shadow:0 0.0625em 0 rgba(255,255,255,0.5);border-radius:5px;box-shadow:0 2px 5px 0 #ccc;-webkit-transition:all 0.25s ease-in-out;-moz-transition:all 0.25s ease-in-out;-ms-transition:all 0.25s ease-in-out;-o-transition:all 0.25s ease-in-out;transition:all 0.25s ease-in-out}.skin-monobook .postedit{top:6em !important}.postedit-faded{opacity:0}.postedit-icon{padding-left:41px;  line-height:25px;background-repeat:no-repeat;background-position:8px 50%}.postedit-icon-checkmark{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABblBMVEUAAAD///////9PfTf///80aRdTgjn///9Feij///////////9Rfzf///////////9PfjZRgDh1o1xOfTb///////+bwYqLtnj///////9PfTa82K////9WhT6YxIL///9QgDdTgzr////////j7uDl7eLq8efi693k7OH///////9UhjuBr2rp9uRUhjr///9YljVKgir///9WiTlYjT3////9/v57vFlbkT5PjC9dlD/5/fhuq09stUTs9uhxuElctCpfnT1huDFloEZloUZmpENmvDZpvDxpvTxqvjxrvT5rvT9rwTxsqktswD5uwkBvuUdxw0NztFBztU9ztVBzwkp0tlJ1xkd2t1R3uVR4w1F4xk54x014yE15uVZ5v1R5xVB6v1R7yFJ8wVh9xVl9yFR9yVd9ylN+xVh+yFd/x1l/yFeAylmEx1+Ny2uY0Hqe04Wj1Ymv3Ze33qLD47TJ5L3O6cPU7Mrq9eb2+/Q4j37OAAAAQHRSTlMAAQIEBAUFBQwPFB4fJCUoKiosQEhJS01RUlZZXmdydXaChYuSlJSWmJmoq6uur8LExcvM19fg5ejt8fX2+Pr7SljgewAAAKpJREFUGBkFwQNCAwAAAMDLtl3LtrG4rWXbtvX77gAgZ6grFwC0bhwNVgKgdPZx8b0dgLi+s7Wn0VoAqpfOI9+BNADZI7fLrz2pSEwGHZuH+78lSK8ZLkLezF3ooyUG3VPXq2USei9WngeyoG195yBYWDF3E/2pAhl1e9Gr8bGT+bfOFCC2fnvh4X7rcqIAQNNu+HT6sxkAjceTL/2ZAIhv+PorBwBJxfkA//dFHSCBy/UTAAAAAElFTkSuQmCC);background-image:url(https://tmbw.net/wiki/resources/src/mediawiki.action/images/green-checkmark.png?2015-05-25T13:01:40Z)!ie;background-position:left}.postedit-close{position:absolute;padding:0 .8em;right:0;top:0;font-size:1.25em;font-weight:bold;line-height:2.3em;color:black;text-shadow:0 0.0625em 0 white;text-decoration:none;opacity:0.2;filter:alpha(opacity=20)}.postedit-close:hover{color:black;text-decoration:none;opacity:0.4;filter:alpha(opacity=40)}
+mark { 
+  background-color: yellow;
+  color: black;
+}
+/* cache key: tmbw_wikidb:resourceloader:filter:minify-css:7:21684e97d25aa6615f6f2015c95ae19c */</style><style>
+.suggestions a.mw-searchSuggest-link,.suggestions a.mw-searchSuggest-link:hover,.suggestions a.mw-searchSuggest-link:active,.suggestions a.mw-searchSuggest-link:focus{color:black;text-decoration:none}.suggestions-result-current a.mw-searchSuggest-link,.suggestions-result-current a.mw-searchSuggest-link:hover,.suggestions-result-current a.mw-searchSuggest-link:active,.suggestions-result-current a.mw-searchSuggest-link:focus{color:white}.suggestions a.mw-searchSuggest-link .special-query{ overflow:hidden;-o-text-overflow:ellipsis; text-overflow:ellipsis;white-space:nowrap}
+/* cache key: tmbw_wikidb:resourceloader:filter:minify-css:7:ae3fa4570b5ac0c6cf7b3776c8ae4d6f */</style><meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="https://tmbw.net/wiki/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=azure&amp;*">
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: tmbw_wikidb:resourceloader:filter:minify-css:7:a2f1a9e3354033da4df1a393c1f9ca92 */</style>
+
+<script>if(window.mw){
+mw.loader.state({"azureSkinJS":"loading"});
+}</script>
+
+<script src="https://tmbw.net/wiki/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=azure&amp;*"></script><script src="/wiki/load.php?debug=false&amp;lang=en&amp;modules=jquery%2Cmediawiki&amp;only=scripts&amp;skin=azure&amp;version=20220123T173659Z"></script>
+
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Basic_Wiki_Formatting","wgTitle":"Basic Wiki Formatting","wgCurRevisionId":317714,"wgRevisionId":317714,"wgArticleId":908,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Wiki Info"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Basic_Wiki_Formatting","wgRelevantArticleId":908,"wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":false,"hidesig":true,"preview":true,"publish":false}});
+}</script>
+
+<script>if(window.mw){
+mw.loader.implement("user.options",function($,jQuery){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens",function($,jQuery){mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\"});});
+/* cache key: tmbw_wikidb:resourceloader:filter:minify-js:7:a5c52c063dc436c1ca7c9f456936a5e9 */
+}</script>
+
+<script>if(window.mw){
+document.write("\u003Cscript src=\"https://tmbw.net/wiki/load.php?debug=false\u0026amp;lang=en\u0026amp;modules=azureSkinJS\u0026amp;only=scripts\u0026amp;skin=azure\u0026amp;*\"\u003E\u003C/script\u003E");
+}</script>
+
+<script src="https://tmbw.net/wiki/load.php?debug=false&amp;lang=en&amp;modules=azureSkinJS&amp;only=scripts&amp;skin=azure&amp;*"></script>
+
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script><script src="/wiki/load.php?debug=false&amp;lang=en&amp;modules=jquery.accessKeyLabel%2Cclient%2CmwExtension%7Cmediawiki.legacy.ajax%2Cwikibits%7Cmediawiki.notify%2Cutil%7Cmediawiki.page.startup&amp;skin=azure&amp;version=20220211T053641Z&amp;*"></script>
+<script language="javascript" type="text/javascript">getcss();</script><style type="text/css">body{background:#002635 url('/wiki/skins/azure/_img/bg/bg4o.svg') no-repeat center 40% fixed;}</style>
+		<script language="javascript" type="text/javascript">theyDayBanner();</script>
+
+	<!-- Logic for making the site mobile responsive --><script language="javascript" type="text/javascript">
+$(document).ready(function() {
+  $('#pagetools-title').on('click',function() {
+    $('body').toggleClass('pagetools-open');
+  });
+  $('#sitenav-title').on('click',function() {
+    $('body').toggleClass('sitenav-open');
+  });
+  $('#personaltoolstitle').on('click',function() {
+    $('body').toggleClass('personaltools-open');
+  });
+});
+</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<script language="javascript" type="text/javascript">jQuery('#ul-personaltools').ready(function(){ jQuery('#ul-personaltools').slideUp(1000); }); jQuery('#ul-toolbox').ready(function(){ jQuery('#ul-toolbox').slideUp(0); });</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Basic_Wiki_Formatting skin-azure action-view vector-animateLayout" data-new-gr-c-s-check-loaded="14.1050.0" data-gr-ext-installed="">
+	<div id="globalWrapper">
+	<div id="supershadow">
+	<div id="container">
+		
+      <div id="content" class="mw-body-primary" role="main"> <!-- bw, this was previously called innercontainer -->
+	<a name="top" id="top"></a>
+	<h1 class="first">WRF-BPLUME</h1>
+	<div id="bodyContent" class="mw-body">
+	<div id="siteSub">WRF-BPLUME</div>
+
+
+	<!-- INTRODUCTION -->
+<p>This guide applies to WRF-bPlume, available at <a href="https://github.com/CFD-UTSA/bplume-WRF">https://github.com/CFD-UTSA/bplume-WRF</a>. WRF-bPlume formulation is developed within the WRF framework (<a href="https://github.com/wrf-model/WRF">https://github.com/wrf-model/WRF</a>) that accounts for the two-way coupling between the ABL and the buoyant plume by accounting for the buoyancy forcings and the buoyant TKE production generated by the plume.
+
+
+<!-- MENU -->
+	<div id="contentsub"></div>
+        <!-- start content -->
+        <div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#overview"><span class="tocnumber">1</span> <span class="toctext">Overview</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#getting_started"><span class="tocnumber">2</span> <span class="toctext">Getting Started</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#configuration"><span class="tocnumber">3</span> <span class="toctext">Simulation Configuration</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#WRF-output"><span class="tocnumber">4</span> <span class="toctext">Output and Data Processing
+</span></a></li>
+<!-- <li class="toclevel-1 tocsection-5"><a href="#coupling_with_fuel_moisture_and_smoke"><span class="tocnumber">5</span> <span class="toctext">Coupling with Fuel Moisture and Smoke</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#data_assimilation_and_ignition_from_a_perimeter"><span class="tocnumber">6</span> <span class="toctext">Data assimilation and ignition from a perimeter</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#standalone_fire_model"><span class="tocnumber">7</span> <span class="toctext">Standalone Fire Model</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#visualisation"><span class="tocnumber">8</span> <span class="toctext">Visualisation</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#diagnostics"><span class="tocnumber">9</span> <span class="toctext">Diagnostics</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#publications"><span class="tocnumber">10</span> <span class="toctext">Publications</span></a></li> -->
+</ul>
+</div>
+
+<!-- OVERVIEW -->
+<!-- --------------------------- -->
+<hr>
+<h3><span class="mw-headline" id="overview">Overview</span></h3>
+<p>WRF-bPlume model was implemented within the Weather Research and
+Forecasting (WRF) Model to simulate the two-way coupling between the atmospheric boundary layer (ABL) and gas plume
+released into the atmosphere. The existing WRF large-eddy simulation (WRF-LES) modeling system
+was modified by coupling an additional transport equation for the plume gas mixture and by accounting for the buoyant
+production term in the turbulence kinetic energy equation. The focus of the work was to understand the effect of atmospheric forcings on plume rise, plume mixing, and plume dynamics during the early stages of plume development. For this purpose, the bPlume-WRF-LES model was used to simulate the release of buoyant plumes from a large area source into
+different atmospheric conditions with varying stratification and mean wind forcing values.
+</p>
+
+
+<!-- GETTING STARTED -->
+<!-- --------------------------- -->
+<hr>
+<h3><span class="mw-headline" id="getting_started">Getting Started</span></h3>
+
+<!-- Installation -->
+<h4 onclick="myFunction('installation_toggle')"><li> <span class="mw-headline" id="installation"> <a>Installation</a></span></li></h4>
+<div id="installation_toggle" hidden>
+<ul><li>Step1: The latest version of WRF-bPlume is avaliable at <a href="https://github.com/CFD-UTSA/bplume-WRF">https://github.com/CFD-UTSA/bplume-WRF</a>.</li></ul>
+<ul><li>Step2: Follow usual WRF-ARW compiling steps (<a href="https://www2.mmm.ucar.edu/wrf/OnLineTutorial/compilation_tutorial.php">WRF-ARW</a>).</li></ul>
+<ul><li>Step3: Users need to choose whether to run WRF in ideal case or real case.</li></ul>
+<ul><li>For Ideal Case:</li></ul>
+<ul><ul><li>Step4: For idealized cases (i.e., no terrain/geographic input) - Compile WRF in Large-eddy simulation mode (em_les).</li></ul></ul>
+<ul><ul><li>Step5: A successful compilation for 3D idealized cases will result in ideal.exe and wrf.exe executables in the main/ directory.</li></ul></ul>
+<ul><ul><li>Step6: Start building cases using the test case available within WRF build.</li></ul></ul>
+<ul><ul><li>Step7: For a quick ideal convective or neutral boundary layer case in large eddy simulation framework, use /test/em_les/ present in the main WRF directory.</li></ul></ul>
+<ul><li>For Real Case:</li></ul>
+<ul><ul><li>Step4:  For real cases (i.e., with terrain and realistic background flow inputs) – Compile WRF in 3D Real cases (em_real).</li></ul></ul>
+<ul><ul><li>Step 5: A successful compilation for 3D real cases will result in real.exe, ncdown.exe and wrf.exe executables in the main/ directory.</li></ul></ul>
+<ul><ul><li>Step 6: If building WRF for real cases, WPS program must be built, and the model initialization requires meteorological inputs for initial and lateral boundary conditions.</li></ul></ul>
+<ul><ul><li>Step 7: Since the meteorological inputs are available at coarser resolution, nested domains are required to downscale the boundary conditions required for region of interest.</li></ul></ul>
+<ul><ul><li>SStep 8: For proper turbulence build-up within the model, nested Large-eddy simulations are to be performed. (See sample namelist.input for recommended settings).</li></ul></ul>
+</div>
+
+<!-- WRF_ARW links -->
+<h4 onclick="myFunction('useful_WRF_ARW_links_toggle')"><li> <span class="mw-headline" id="useful_WRF_ARW_links"><a>Useful WRF-ARW links</a></span></li></h4>
+<div id="useful_WRF_ARW_links_toggle" hidden>
+<ul><li> <a href="https://opensky.ucar.edu/islandora/object/opensky:2898">Technical guide</a></li></ul>
+<ul><li> <a href="https://www2.mmm.ucar.edu/wrf/users/docs/wrf-dyn.html">WRF Dynamics guide</a></li></ul>
+<ul><li> <a href="https://www2.mmm.ucar.edu/wrf/users/docs/user_guide_v4/v4.0/contents.html">User guide</a></li></ul>
+<ul><li> <a href="https://www2.mmm.ucar.edu/wrf/users/supports/tutorial.html">Tutorials page</a></li></ul>
+<ul><li> <a href="https://www2.mmm.ucar.edu/wrf/users/namelist_best_prac_wrf.html">Best Practices</a></li></ul>
+</div>
+
+<!-- --------------------------- -->
+<!-- CONFIGURATION -->
+<hr>
+<h3><span class="mw-headline" id="configuration">WRF-bPlume Simulation Configuration</span></h3>
+
+<!-- new_in_WRF_bPlume -->
+<h4 onclick="myFunction('new_in_WRF_bPlume_toggle')"> <li><span class="mw-headline" id="new_in_WRF_bPlume"> <a> New variables added in WRF-bPlume </a> </span> </li></h4> 
+<div id="new_in_WRF_bPlume_toggle" hidden>
+<ul><li>tke_heat_flux_hot 					– Additional heat flux at the source location</li></ul>
+<ul><li>heat_flux_wait_mins 				– Minutes from simulation start to release the plume</li></ul>
+<ul><li>heat_flux_run_mins 		– Minutes from plume start to turn off the plume source</li></ul>
+<ul><li>density_current 		– Flag to simulate lock-exchange density current</li></ul>
+<ul><li>lock_length 		– density current lock length</li></ul>
+<ul><li>lock_height 		– density current lock height</li></ul>
+<ul><li>lock_mixture 		– density current lock fluid mixing ratio</li></ul>
+<ul><li>axisymmetric_plume 		– flag to simulate axisymmetric plume at the center of the bottom boundary</li></ul>
+<ul><li>plume_gas_constant 		– Gas constant of plume material</li></ul>
+<ul><li>plume_surface_flux 		– Surface flux of plume mixing ratio</li></ul>
+<ul><li>source_dia 			– Plume source diameter</li></ul>
+</div>
+
+<!-- files_modified -->
+<h4 onclick="myFunction('files_modified_toggle')"><li> <span class="mw-headline" id="files_modified"><a>WRF-bPlume following files are modified based on the default WRF-ARW framework (v 4.0.3)</a></span></li></h4>
+<div id="files_modified_toggle" hidden>
+<ul><li>/Registry/Registry.EM_COMMON</li></ul> 
+<ul><li>/dyn_em/module_big_step_utilities.F</li></ul>
+<ul><li>/dyn_em/module_diffusion_em.F</li></ul>
+<ul><li>/dyn_em/module_em.F</li></ul>
+<ul><li>/dyn_em/module_initialize_ideal.F</li></ul>
+<ul><li>/dyn_em/solve_em.F</li></ul>
+<ul><li>/share/wrf_timeseries.F</li></ul>
+</div>
+
+<!-- Simulation Time -->
+<h4 onclick="myFunction('simulation_time_toggle')"><li> <span class="mw-headline" id="simulation_time"><a>Simulation Time</a></span></li></h4>
+<div id="simulation_time_toggle" hidden>
+<ul>&time_control</ul> 
+<ul><ul>run_days &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  = 0,</ul></ul>
+<ul><ul><mark>run_hours &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  = 2,</mark> <ul># WRF stops running when condition is fulfilled.</ul></ul></ul>
+<ul><ul>run_minutes &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  = 0,</ul></ul>
+<ul><ul>start_year &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;  = 0001,</ul></ul>
+<ul><ul>start_month &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  = 01,</ul></ul>
+<ul><ul>start_day &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;  = 01,</ul></ul>
+<ul><ul>start_hour &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  = 0,</ul></ul>
+<ul><ul>start_minute &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  = 0,</ul></ul>
+<ul><ul>start_second &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 0,</ul></ul>
+<ul><ul>end_year &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= 0001,</ul></ul>
+<ul><ul>end_month &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 01,</ul></ul>
+<ul><ul>end_day &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  = 01,</ul></ul>
+<ul><ul><mark>end_hour &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  = 04,</mark><ul># WRF stops running when condition is fulfilled.</ul></ul></ul>
+<ul><ul>end_minute &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 00,</ul></ul>
+<ul><ul>end_second &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 00,</ul></ul>
+<ul><ul>history_interval_m &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 00,</ul></ul>
+<ul><ul><mark>history_interval_s &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 10,</mark><ul># WRF writes the output for each domain.
+Minimum time step to write is 1s.</ul></ul></ul>
+<ul><ul>frames_per_outfile &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 90,</ul></ul>
+<ul><ul><mark>restart &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  = .false.,</mark><ul># Restart runs are half-completed runs.
+The start time must match the time information in restart file (wrfrst_d01_*.nc).</ul></ul></ul>
+<ul><ul>restart_interval_m &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 15,</ul></ul>
+<ul><ul>io_form_history &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 2,</ul></ul>
+<ul><ul>io_form_restart &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 2,</ul></ul>
+<ul><ul>io_form_input &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 2,</ul></ul>
+<ul><ul>io_form_boundary &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 2,</ul></ul>
+<ul><ul>iofields_filename &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = "myourfields.txt",</ul></ul>
+</div>
+
+<!-- Contents of myoutfields.txt-->
+<h4 onclick="myFunction('myoutfields_toggle')"><li> <span class="mw-headline" id="myoutfields.txt"><a>Contents of myoutfields.txt</a></span></li></h4>
+<div id="myoutfields_toggle" hidden>
+<ul><li>Useful in reducing the WRFOUT file size</li></ul> 
+<ul><li>Many of the default variables written by WRF are unimportant for ideal cases</li></ul>
+<ul><li>Must be placed in each folder where the case is running</li></ul>
+<ul><p style="font-size: xx-small;">-:h:0:LU_INDEX,DZS,VAR_SSO,NEST_POS,FNM,FNP,RDNW,RDN,DNW,DN,CFN,CFN1,RDX,RDY,RESM<br>-:h:0:ZETATOP,CF1,CF2,CF3,ITIMESTEP,XTIME,SHDMAX,SHDMIN,SNOALB,TSLB<br>
+-:h:0:SMOIS,SH2O,SEAICE,XICEM,SFROFF<br>
+-:h:0:UDROFF,IVGTYP,ISLTYP,VEGFRA,ACSNOM,SNOW,SNOWH,CANWAT,COSZEN,LAI,VAR<br>
+-:h:0:MAPFAC_M,MAPFAC_U,MAPFAC_V,MAPFAC_MX,MAPFAC_MY,MAPFAC_UX,MAPFAC_UY<br>
+-:h:0:MAPFAC_VX,MF_VX_INV,MAPFAC_VY<br>
+-:h:0:F,E,SINALPHA,COSALPHA,TISO,MAX_MSTFX,MAX_MSTFY,RAINC,RAINSH,RAINNC<br>
+-:h:0:SNOWNC,GRAUPELNC,HAILNC,SWDOWN<br>
+-:h:0:OLR,CLAT,ALBBCK,EMISS,NOAHRES,TMN,SNOWC,SR,C1H,C2H,C1F,C2F,C3H,C4H,C3F,C4F,PCB,PC<br>
+-:h:0:LANDMASK,LAKEMASK<br>
+-:h:0:HFX_FORCE_TEND,LH_FORCE_TEND,TSK_FORCE_TEND,HFX_FORCE,LH_FORCE,TSK_FORCE<br>
+-:h:0:ZS,SSTSK,GLW,SWNORM<br>
+-:h:0:ISEEDARR_SPPT,ISEEDARR_SKEBS,ISEEDARR_RAND_PERTURB,ISEEDARRAY_SPP_CONV<br>
+-:h:0:ISEEDARRAY_SPP_PBL,ISEEDARRAY_SPP_LSM,THIS_IS_AN_IDEAL_RUN<br>
+-:h:0:SAVE_TOPO_FROM_REAL,TLP,SST_INPUT<br>
+-:h:0:CLDFRA,ALBEDO,ZNU,ZNW<br>
+-:h:0:Q2,T2,TH2,U10,V10,GRDFLX,ACGRDFLX,HGT,P_STRAT,XLAT_U,XLONG_U,XLAT_V,XLONG_V<br>
+<mark>+:h:0:</mark>PBLH,ACHFX,ACLHF,SST<br><ul># Anything that is required in addition to usual WRF output variables can be added to stream0 using a +:h:0: command</ul>
+</p></ul>
+</div>
+
+<!-- Simulation Domains -->
+<h4 onclick="myFunction('simulation_domain_toggle')"><li> <span class="mw-headline" id="simulation_domain"><a>Simulation Domains</a></span></li></h4>
+<div id="simulation_domain_toggle" hidden>
+<ul>&domains</ul> 
+<ul><ul>time_step &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  = 0,</ul></ul>
+<ul><ul>time_step_fract_num &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= 1,</ul></ul>
+<ul><ul>time_step_fract_den &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  = 6,<ul># Fractional timesteps are written as numerator and denominator (here, dt =1/6 sec)
+.</ul></ul></ul>
+<ul><ul>max_dom &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  = 1,</ul></ul>
+<ul><ul>s_we &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  = 1,</ul></ul>
+<ul><ul>e_we &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  = 201,</ul></ul>
+<ul><ul>s_sn &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  = 1,</ul></ul>
+<ul><ul>e_sn &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  = 201,</ul></ul>
+<ul><ul>s_vert &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 1,</ul></ul>
+<ul><ul>e_vert &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= 301,</ul></ul>
+<ul><ul>dx &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 20,</ul></ul>
+<ul><ul>dy &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  = 20,</ul></ul>
+<ul><ul>ztop &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  = 3000,</ul></ul>
+<ul><ul>grid_id &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 1,</ul></ul>
+<ul><ul>parent_id &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 0,</ul></ul>
+<ul><ul>i_parent_start &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 0,</ul></ul>
+<ul><ul>j_parent_start &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 0,</ul></ul>
+<ul><ul>parent_grid_ratio &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 1,</ul></ul>
+<ul><ul>parent_time_step_ratio &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  = 1,</ul></ul>
+<ul><ul>feedback &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 0,</ul></ul>
+<ul><ul>smooth_option &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 0,</ul></ul>
+</div>
+
+<!-- Simulation Physics -->
+<h4 onclick="myFunction('simulation_physics_toggle')"><li> <span class="mw-headline" id="simulation_physics"><a>Simulation Physics</a></span></li></h4>
+<div id="simulation_physics_toggle" hidden>
+<ul><li>For Large-eddy simulations, no need to use PBL or Cummulus schemes.</li></ul> 
+<ul><li>mp_physics is the key that invokes which microphysics variables are to be considered 
+Buoyant gas in bPlume model is part of such schemes.
+</li></ul>
+<ul>&physics</ul> 
+<ul><ul><mark>mp_physics &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 0,</mark><ul># mp_physics = 0 tells WRF to resolve only water vapor ratios and plume mixing ratios.</ul></ul></ul>
+<ul><ul>ra_lw_physics &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= 0,</ul></ul>
+<ul><ul>ra_sw_physics &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  = 0,</ul></ul>
+<ul><ul>radt &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  = 0,</ul></ul>
+<ul><ul>sf_sfclay_physics &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  = 1,</ul></ul>
+<ul><ul>sf_surface_physics &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  = 0,</ul></ul>
+<ul><ul>bl_pbl_physics &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  = 0,</ul></ul>
+<ul><ul>bldt &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  = 0,</ul></ul>
+<ul><ul>cu_physics&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 0,</ul></ul>
+<ul><ul>cudt &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= 0,</ul></ul>
+<ul><ul>isfflx &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 2,</ul></ul>
+<ul><ul>ideal_xland&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  = 1,</ul></ul>
+<ul><ul>num_soil_layers &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 5,</ul></ul>
+</div>
+
+
+<!-- Simulation Dynamics -->
+<h4 onclick="myFunction('simulation_dymamics_toggle')"><li> <span class="mw-headline" id="simulation_dymamics"><a>Simulation Dynamics</a></span></li></h4>
+<div id="simulation_dymamics_toggle" hidden>
+<ul><li>Dynamics module is the place where all the plume related inputs are given</li></ul> 
+
+<ul>&dynamics</ul> 
+<ul><ul>hybrid_opt &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 0,</ul></ul>
+<ul><ul>rk_ord &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= 3,</ul></ul>
+<ul><ul><mark>diff_opt &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 2,</mark></ul></ul>
+<ul><ul><mark>km_opt &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  = 2,</mark><ul># Tells which sub-grid scale model is to be used.</ul></ul></ul>
+<ul><ul>damp_opt &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;= 0,</ul></ul>
+<ul><ul>zdamp &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= 200.,</ul></ul>
+<ul><ul>dampcoef &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  = 0.2,</ul></ul>
+<ul><ul>khdif &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= 1.,</ul></ul>
+<ul><ul>kvdif &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= 1.,</ul></ul>
+<ul><ul>c_s &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= 0.18,</ul></ul>
+<ul><ul>c_k &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 0.10,</ul></ul>
+<ul><ul>mix_isotropic &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 1,</ul></ul>
+<ul><ul>smdiv &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 0.1,</ul></ul>
+<ul><ul>emdiv &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 0.01,</ul></ul>
+<ul><ul>tke_heat_flux &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 0.24,</ul></ul>
+<ul><ul><mark>tke_heat_flux_hot &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 0.24,</mark></ul></ul>
+<ul><ul>heat_flux_len &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 1.,</ul></ul>
+<ul><ul><mark>heat_flux_wait_mins &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 35.,</mark></ul></ul>
+<ul><ul><mark>heat_flux_run_mins &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 180.,</mark></ul></ul>
+<ul><ul>density_current &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 0.,</ul></ul>
+<ul><ul>axisymmetric_plume &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 1.,</ul></ul>
+<ul><ul>lock_length &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 100.,</ul></ul>
+<ul><ul>lock_height &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 50.,</ul></ul>
+<ul><ul>lock_mixture &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 0.0,</ul></ul>
+<ul><ul><mark>plume_gas_constant &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 488.92,</mark></ul></ul>
+<ul><ul><mark>plume_surface_flux &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = -10.,(g/kg m/s)</mark></ul></ul>
+<ul><ul><mark>source_dia &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 400.,</mark></ul></ul>
+<ul><ul>time_step_sound &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 6,</ul></ul>
+<ul><ul><mark>pert_coriolis &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = .false.,</mark></ul></ul>
+<ul><ul>use_theta_m &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 1,</ul></ul>
+<ul><ul>sfs_opt &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 1,</ul></ul>
+<ul><ul>m_opt &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 1,</ul></ul>
+<ul><ul>tke_drag_coefficient &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 0.005,</ul></ul>
+<ul><ul>top_lid &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = .false.,</ul></ul>
+</div>
+
+<!-- Simulation Boundary Conditions -->
+<h4 onclick="myFunction('boundary_conditions_toggle')"><li> <span class="mw-headline" id="boundary_conditions"><a>Simulation Boundary Conditions</a></span></li></h4>
+<div id="boundary_conditions_toggle" hidden>
+<ul><li>For LES runs, periodic in horizontal boundary condition is used</li></ul> 
+<ul><li>These are given through input_sounding file in the same directory</li></ul> 
+
+<ul><li>First line gives the temperature and moisture mixing ratio at the surface level (1000 corresponds to pressure)</li></ul> 
+<ul><li>Required inputs are temperature, moisture, U and V wind components
+This example has no mean wind. This example has a 10 m/s mean wind along x-direction and an initial boundary layer depth of 2000 m. </li></ul> 
+
+<ul>1000.00   305.00      14.00</ul>
+<ul>25.00     300.00      10.00       10.00       0.00</ul>
+<ul>75.00     300.00      10.00       10.00       0.00</ul>
+<ul> 125.00     300.00      10.00       10.00       0.00</ul>
+<ul> 175.00     300.00      10.00       10.00       0.00</ul>
+<ul> 225.00     300.00      10.00       10.00       0.00</ul>
+<ul> 275.00     300.00      10.00       10.00       0.00</ul>
+<ul> 325.00     300.00      10.00       10.00       0.00</ul>
+<ul> 375.00     300.00      10.00       10.00       0.00</ul> 
+<ul> 1725.00     300.00      10.00       10.00       0.00</ul>
+<ul> 1975.00     302.43      10.00       10.00       0.00</ul>
+<ul> 2025.00     305.63       4.00       10.00       0.00</ul>
+<ul> 2075.00     308.05       4.00       10.00       0.00</ul>
+<ul> 2125.00     308.20       4.00       10.00       0.00</ul>
+<ul> 2175.00     308.35       4.00       10.00       0.00</ul>
+<ul> 2225.00     308.50       4.00       10.00       0.00</ul>
+</div>
+
+<!-- Simulation Time CBL -->
+<h4 onclick="myFunction('simulation_times_cbl_toggle')"><li> <span class="mw-headline" id="Setting_SimulationTimes"><a>Setting Simulation Times – Plume + CBL</a></span></li></h4>
+<div id="simulation_times_cbl_toggle" hidden>
+	<ul>&time_control
+<ul>run_days                          = 0,</ul>
+<ul>run_hours                           = 2,</ul>
+<ul>run_minutes                         = 0,</ul>
+<ul>run_seconds                         = 0,</ul>
+<ul>start_year                          = 0001,</ul>
+<ul>start_month                         = 01,</ul>
+<ul>start_day                           = 01,</ul>
+<ul>start_hour                          = 02,</ul>
+<ul>start_minute                        = 00,</ul>
+<ul>start_second                        = 00,</ul>
+<ul>end_year                            = 0001,</ul>
+<ul>end_month                           = 01,</ul>
+<ul>end_day                             = 01,</ul>
+<ul>end_hour                            = 04,</ul>
+<ul>end_minute                          = 00,</ul>
+<ul>end_second                          = 00,</ul>
+<ul>history_interval_m                  = 00,</ul>
+<ul>history_interval_s                  = 10,</ul>
+<ul>frames_per_outfile                  = 90,</ul>
+<ul>restart                             = .true.,</ul>
+<ul>restart_interval_m                  = 15,</ul>
+<ul>io_form_history                     = 2</ul>
+<ul>io_form_restart                     = 2</ul>
+<ul>io_form_input                       = 2</ul>
+<ul>io_form_boundary                    = 2</ul>
+<ul>iofields_filename                   = "myoutfields.txt"</ul>
+</div>
+</div>
+
+
+<!-- --------------------------- -->
+<!-- OUTPUT DATA -->
+<hr>
+<h3><span class="mw-headline" id="WRF-output">WRF-bPlume Output and Data Processing</span></h3>
+
+<!-- NetCDF -->
+<h4 onclick="myFunction('netcdf_toggle')"><li> <span class="mw-headline" id="NetCDF"><a>Output Data: NetCDF</a></span></li></h4>
+<div id="netcdf_toggle" hidden>
+	<ul>WRF writes its output in NetCDF format. NetCDF (network Common Data Form) is a file format for storing multidimensional scientific data (variables) such as temperature, humidity, pressure, wind speed, and direction. Each of these variables can be displayed through a dimension (such as time) in ArcGIS by making a layer or table view from the netCDF file.</ul>
+
+	<ul>A python library PyPlume is used to extract single data variable from NetCDF files and converted them into .npy files for further analysis. To extract data, PyPlume used xarray and dask.array python libraries (<a href="https://docs.xarray.dev/en/stable/">xarray document</a>) </ul>
+</div>
+
+<!-- NetCDF -->
+<h4 onclick="myFunction('pyplume_toggle')"><li> <span class="mw-headline" id="Pyplume"><a>PyPlume Python Library</a></span></li></h4>
+<div id="pyplume_toggle" hidden>
+	<ul>PyPlume Python Library was developed using data generated from WRF-bPlume numerical tool.
+The library for Pyplume is given in the flowchart.Data generated by WRF-bPlume model is in the netCDF
+format. Pyplume library gives the ability to extract a specific variable out of the netCDF data files.
+Classes from the library have been developed to compute and visualize the time-averaged mean flow field
+and the turbulence characteristics of the plume. The library also implemented a vortex identification
+method allowing detecting and visualizing vertices. Pyplume library streamlines processing steps of the
+turbulent buoyant plume data and make it easier for researchers to extract plume characteristics out of
+the data without the computation background knowledge. The data analysis is performed for plume’s
+physical metrics and turbulent characteristic.</ul>
+<center>
+<picture>
+  <source srcset="images/Pyplume FlowChart.png">
+  <img src="images/Pyplume FlowChart.png" alt="Flowchart" style="width:80%;">
+  <figcaption>Figure 1: Pyplume Flowchart.</figcaption>
+</picture>
+</center>
+
+	<ul><li>Installation: The PyPlume library is installed by using pip install using the command line “
+pip install pyplumewrfles ”. It should be noted to upgrade pip install using the command line
+“ python -m pip install –upgrade pip ”. Detail documents of PyPlume is available at GitHub:
+https://github.com/pyplumecamee/pyplume</li></ul>
+<ul><li>Extracting Data: The netCDF output data from WRF-bPlume contains instantaneous velocities
+in Cartesian coordinates (W,V,U), potential temperature different represented as T, and plume
+gas mixing ratio, QPLUME. These five variables are the main focus in the analysis process. T
+and QPLUME can be use to calculate plume temperature Θ , density ρ , or reduced gravity
+g′. Pyplume had included function pyplume.WRF2npy() to extracts all the variables from the
+netCDF files and saves it to NumPy array files. The shape of the data is four dimensions arrays
+(time,z,y,x).</li></ul>
+<ul><li>Metadata (class): The Metadata class is used to store all the required inputs variable for data
+that will be used to analyze the output data. This class is not a requirement and the variables
+can be store individually. List of input variables are available in the namelist file which is the
+input for the WRF-bPlume simulation. Metadata includes the size of the variables corresponds
+to the shape of the data and the mesh spacing (dz,dy,dx) and time step of the data output,
+dt. The class also includes the constant heat flux of the source, the gas constant for the plume
+simulation, the source diameter D, located at the center of the domain bottom boundary, the
+ambient temperature, dynamic viscosity and density of the ambient gas and the released gas.</li></ul>
+<ul><li>Buoyancy and Reduced gravity parameters (g′ρs and g′Θs ): reduced gravity is a robust metric to
+determine the interface of the plume. Using a threshold, the data would be separated into plume-
+area and non-plume-area. The reduced gravity can be based on relative density difference between
+the released gas and the ambient gas, or based on the relative temperature difference between the
+two (1a and 1b). The reduced gravity based on temperature difference and density difference is
+calculated using the functions: pyplume.gprimeT() and pyplume.gprimeRho(), respectively.</li></ul>
+<ul><li>Plume Metrics (class): Plume metrics class is a built-in function to calculate the instantaneous
+plume metrics. Plume metrics class requires the temperature reduced gravity g′Θs and velocity
+in the axial direction W as inputs. The plume interface and plume height are based on the
+temperature reduced gravity by using a threshold criterion. The T and W data are also used
+to calculate the non-dimensionless number for plume data such as the plume Reynolds number,
+maximum mean velocity at the centerline (wcmax), plume half-width at the axial location
+of maximum velocity, the Froude number and Turbulence Reynolds number. This class
+also includes visualization tool to visualize the plume interface in real-time.</li></ul>
+<ul><li>Plume Turbulence Metrics (class): This class calculates the turbulent time average data of the
+plume. The data input is a 3-D array. The input data includes the temperature difference between
+the ambience and the plume, volume fraction, and velocity components (u,v,w). The class will
+generate all the turbulent characteristics of the data such as Reynolds stress, turbulent kinetic
+energy (TKE), rate of TKE production from buoyancy, rate of TKE production from shear. The
+class also includes a visualization function to plot the 2-D and 1-D turbulence fields. The axial-
+and radial profiles of r.m.s. of velocity fluctuations (urms, vrms, wrms), buoyancy fluctuations
+(g′ρrms, g′Θrms) , and momentum flux and buoyancy flux are evaluated. The turbulence kinetic
+energy and the terms are the T.K.E. transport equations are evaluated next. The TKE
+transport equation includes, the shear- and buoyancy TKE production terms, the mean advection
+and transport of TKE terms. The transport equation of the temperature variance equations is also calculated. This equation included the TKE production due to temperature variance.</li></ul>
+<ul><li>Vortex identification Method (function): The PyPlume library included λ2 vortex identification
+method. Vortex Identification method is used to extract the Coherent structures and the large-
+scale features of the flow. The input is the velocity field (u,v,w). λ2 vortex criteria is a vortex
+visualization technique based on using minimum pressure criterion to define a vortex, but it ignores
+the unsteady strain rate and viscosity to define a vortex. Using vortex criteria, three-dimensional
+Iso-surface visuals are generated.</li></ul>
+</div>
+
+
+<!-- Results -->
+<h4 onclick="myFunction('pyplume_results_toggle')"><li> <span class="mw-headline" id="Pyplume_results"><a>PyPlume Results</a></span></li></h4>
+<div id="pyplume_results_toggle" hidden>
+
+<ul>WRF-bPlume Example: a case study for release of CO2 plume into the neutral atmosphere is demonstrated. Neutral atmosphere
+means the ambient of the simulation had no air movements. Plume simulated data was generated
+using WRF-bPlume. The physical domain of simulation is 7km (height) x 1.8km x 1.8km (horizontal
+direction). A circular source is placed at the bottom center of the bottom surface. The diameter of
+the circular source (D) of the released gas 400 meters.</ul>
+
+<center>
+<picture>
+  <img src="images/Front_Height.png" alt="Front_height" style="width:60%;">
+  <figcaption>Figure 2: Plume Height.</figcaption>
+</picture>
+</center>
+
+<center>
+<picture>
+  <img src="images/Front_Velocity.png" alt="Front_velocity" style="width:55%;">
+  <figcaption>Figure 3: Plume Velocity.</figcaption>
+<center>
+<picture>
+
+<center>
+<picture>
+  <img src="images/overviewplot108.png" alt="overview1" style="width:40%;">
+  <img src="images/overviewplot216.png" alt="overview2" style="width:40%;">
+  <img src="images/overviewplot432.png" alt="overview3" style="width:40%;">
+  <figcaption>Figure 4: Plume Temperature Contour (Times =1080s,2160s,4320s).</figcaption>
+</picture>
+</center>
+
+<center>
+<picture>
+  <img src="images/TKE_centerline.png" alt="TKE_centerline" style="width:55%;">
+  <figcaption>Figure 5: Plume TKE Centerline.</figcaption>
+<center>
+<picture>
+
+<center>
+<picture>
+  <img src="images/l2_gT_2.png" alt="lambda2" style="width:55%;border: 1px solid #000;">
+  <figcaption>Figure 6: Lambda2 Contour.</figcaption>
+  
+</picture>
+</center>
+
+	
+</div>
+<hr>
+
+
+<!-----------------------------------------THE END -->
+<table cellspacing="3" align="center">
+<tbody><tr valign="top">
+<td width="80%" class="centerblock">
+<center style="font-size: x-large;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/CFD-UTSA/bplume-WRF">WRF_bPlume GitHub</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</center>
+</td></tr></tbody></table>
+</div>
+
+
+
+<script>
+function myFunction(myid) {
+  var x = document.getElementById(myid);
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>  
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
